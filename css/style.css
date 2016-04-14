@@ -1,0 +1,358 @@
+/* Common ------------------------------------------*/
+/* 1.font */
+body{
+    font-family: "Hiragino Kaku Gothic ProN" , "游ゴシック" , "Yu Gothic" , "メイリオ", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+/* IE */
+@font-face {
+font-family:"DIN";
+src: url(../fonts/din-light-webfont.eot);
+}
+@font-face {
+font-family:"DIN";
+src: url(../fonts/din-light-webfont.woff) format("woff");
+}
+
+/* 2.link */
+a:link, a:visited{
+    color:#666666;
+}
+a:hover{
+    color:#FF6600;
+}
+
+/* 3.common layout */
+.inner{
+    /*background: #0000FF;*/
+    width: 1000px;
+    margin: 0 auto 0;
+    overflow: hidden;
+}
+
+.tCenter {
+  text-align: center;
+}
+
+.tRight {
+  text-align: right;
+}
+
+.mCenter {
+  margin: 0 auto;
+}
+
+.w90 {
+  width: 90%;
+}
+
+/*h1 {
+  margin-top: 30px;
+  font-size: 30px;
+}*/
+
+h2 {
+  font-size: 24px;
+}
+
+form {
+  /*margin: 50px 0;*/
+}
+
+.submit {
+  padding: 5px 15px;
+  font-size: 1.0em;
+  background-color: #4285F4;
+  color: #fff;
+  border-style: none;
+  border-radius: 5px  ;
+}
+
+.deleteBtn {
+  padding: 5px 15px;
+  font-size: 1.2em;
+  background-color: #ff4521;
+  color: #fff;
+  border-style: none;
+  border-radius: 3px;
+}
+
+.btn {
+  display: inline-block;
+  width: 140px;
+  height: 25px;
+}
+
+.displayNone {
+  display: none;
+}
+
+
+/* header ---------------------------------------*/
+header{
+    /*background: #FF0000;*/
+    height: 70px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+}
+#siteId{
+    width: 380px;
+    overflow: hidden;
+    float: left;
+    margin-top: 20px;
+}
+#siteId h1{
+    float: left;
+    width: 120px;
+}
+#siteId p{
+    font-family: 'DIN', Helvetica, Arial, sans-serif;
+    float: right;
+    font-size: 14px;
+    width: 240px;
+    line-height: 2.2;
+}
+header ul{
+    float: right;
+    width: 300px;
+    margin-top: 20px;
+}
+
+header li {
+    float: right;
+}
+header ul a:link, header ul a:visited{
+    text-decoration: none;
+    color: #00f;
+}
+header ul a:hover{
+    color: #ccc;
+}
+
+.loginBtn {
+  color: #ccc;
+  border: none;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.loginBtn:hover {
+  color: #00f;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+/* mainVisual ------------------------------------*/
+#mainVisual{
+    clear:both;
+    width: 100%;
+    height: 310px;
+    position: relative;
+    background-image:
+    url(../img/main_img.jpg),
+    linear-gradient(to bottom,  #d6f0f9 0%,#FFF 100%);
+    background-position: center center, left top;
+    background-repeat: no-repeat, no-repeat;
+    opacity: 0;
+    -webkit-animation:'bgAnime';
+    -webkit-animation-duration:1s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-delay:0;
+    -webkit-animation-iteration-count:1;
+    -webkit-animation-direction:normal;
+    -webkit-animation-fill-mode: forwards;
+}
+@-webkit-keyframes 'bgAnime' {
+    0% { opacity:0;}
+    100% {opacity:1;}
+}
+#mainVisual-text{
+    width: 750px;
+    height: 60px;
+    position: absolute;
+    top: 120px;
+    left:50%;
+    margin-left: -250px;
+    opacity: 0;
+    -webkit-animation:'textAnime';
+    -webkit-animation-duration:2s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-delay:1s;
+    -webkit-animation-iteration-count:1;
+    -webkit-animation-direction:normal;
+    -webkit-animation-fill-mode: forwards;
+}
+@-webkit-keyframes 'textAnime' {
+    0% { opacity:0; margin-left: -250px;}
+    100% {opacity:1; margin-left: -277px;}
+}
+/* nav ------------------------------------*/
+nav{
+    height: 60px;
+    background: linear-gradient(to bottom,  #CCC 0%,#AAA 100%);
+    border-top: 1px solid #FFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+nav ul{
+    overflow: hidden;
+}
+nav li{
+    float: left;
+    width: 189px;
+    border-right: 1px solid #CCC;
+}
+nav li:first-child{
+  border-left: 1px solid #CCC;
+  width: 188px;
+}
+nav li a:link, nav li a:visited{
+  color:#FFF;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'DIN', Helvetica, Arial, sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+  position: relative;
+  height: 60px;
+  text-align: center;
+  line-height: 2.4;
+  background: linear-gradient(to bottom,  #CCC 0%,#AAA 100%);
+}
+nav li a:hover{
+  background: linear-gradient(to bottom, #999 0%, #AAA 100%);
+  text-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+  opacity: 0.7;
+}
+nav li.current a:link, nav li.current a:visited{
+  background: linear-gradient(to bottom, #999 0%, #AAA 100%);
+  text-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+  opacity: 0.7;
+}
+nav li a:link span,
+nav li a:visited span{
+  font-size: 11px;
+  position: absolute;
+  left:0;
+  bottom:10px;
+  width: 190px;
+  height: 15px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+
+/* container ------------------------------------*/
+#container{
+    width: 1000px;
+    margin:50px auto 50px;
+    overflow: hidden;
+}
+#container h2{
+    font-size: 24px;
+    font-family: 'DIN', Helvetica, Arial, sans-serif;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* content ------------------------------------*/
+#contentsLeft{
+    float: left;
+    width: 120px;
+    margin-right: 50px;
+}
+#main{
+    float: right;
+    width: 830px;
+}
+
+.items {
+  margin-top: 60px;
+}
+
+.item {
+  overflow: hidden;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 2px solid #999;
+}
+
+.itemImg {
+  float: left;
+  margin-right: 30px;
+}
+
+.itmPrice {
+  float: right;
+  width: 571px;
+  text-align: right;
+  font-size: 20px;
+  display: inline-block;
+}
+
+
+/* news ------------------------------------*/
+#news {
+  margin-top: 50px;
+}
+
+#news dd {
+  margin-bottom: 20px;
+}
+
+/* recommend ------------------------------------*/
+#recommend {
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+#recommend01 {
+  float: left;
+  margin: 0 50px 0 0;
+}
+
+/* footer ------------------------------------*/
+footer {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  text-align: center;
+}
+
+/* item.php ------------------------------------*/
+/**/
+/* contentBox ------------------------------------*/
+.contentBox {
+  margin: 100px auto 30px;
+  padding: 30px;
+  width: 550px;
+  overflow: hidden;
+}
+
+.itemImgInContentBox {
+  float: left;
+  width: 100px;
+}
+
+.itemDetailInContentBox {
+  float: right;
+  width: 450px;
+}
+
+.cartInsert {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
